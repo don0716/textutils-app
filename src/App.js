@@ -5,7 +5,7 @@ import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-import {createBrowserRouter, CreateRoutesFromElements, Routes, Route, Link, Router} from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 
 
 function App() {
