@@ -5,7 +5,7 @@ import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-// import { Routes, Route} from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 
 
 function App() {
@@ -69,18 +69,18 @@ function App() {
     <Navbar title= "TextUtils" about= "About Us" mode={mode} toggleMode={toggleMode} themeChangeHandler={themeChangeHandler}></Navbar>
     <Alert alert={alert}/>
 
-    <div className="container my-3">
+    {/* <div className="container my-3">
        <TextForm heading = "Enter The Text To Analyze Below" mode={mode} showAlert={showAlert}/>
        <About mode={mode}/>
-    </div>
+    </div> */}
 
-    {/* <div className="container my-3">
+    <div className="container my-3">
      <Routes>
         <Route exact path="/" element={<TextForm heading = "Enter The Text To Analyze Below" mode={mode} showAlert={showAlert}/>}/>
 
         <Route path="/about" element={<About mode={mode}/>}/>
       </Routes>
-    </div> */}
+    </div>
       
 
     </>
