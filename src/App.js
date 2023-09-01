@@ -67,19 +67,21 @@ function App() {
   return (
     <>
     <Navbar title= "TextUtils" about= "About Us" mode={mode} toggleMode={toggleMode} themeChangeHandler={themeChangeHandler}></Navbar>
-    <Alert alert={alert}/>
+
+      <Alert alert={alert}/>
+    
 
     {/* <div className="container my-3">
        <TextForm heading = "Enter The Text To Analyze Below" mode={mode} showAlert={showAlert}/>
        <About mode={mode}/>
     </div> */}
 
-    <div className="container my-3">
+    <div className="container my-3 mb-4">
      <Routes>
-        <Route exact path="/" element={<TextForm heading = "Enter The Text To Analyze Below" mode={mode} showAlert={showAlert}/>}/>
+        <Route path="/" element={<TextForm heading = "Try Textutils - Textcounter, Wordcounter, remove extra spaces, Lowercase to Uppercase, Uppercase to lowercase" mode={mode} showAlert={showAlert}/>}/>
 
         <Route path="/about" element={<About mode={mode}/>}/>
-      </Routes>
+     </Routes>
     </div>
       
 

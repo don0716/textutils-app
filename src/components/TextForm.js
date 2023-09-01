@@ -66,21 +66,21 @@ export default function TextForm(props) {
           <div className="mb-3">
             <textarea style={{backgroundColor: props.mode==='dark'?'#d1d1d1':'white', color: props.mode === 'dark'?"white":"black"} } className="form-control" value={text} id="myBox" rows="8" onChange={handleChange}></textarea>
           </div>
-          <button className={`btn btn-secondary mx-1`} onClick={onClickUpHandler}>Convert to Upper-Case</button>
-          <button className={`btn btn-secondary mx-1`} onClick={onClickDownHandler}>Convert to Lower-Case</button>
-          <button className={`btn btn-secondary mx-1`} onClick={copyHandler}>Copy Text</button>
-          <button className={`btn btn-secondary mx-1`} onClick={onClickClearHandler}>Clear</button>
-          <button className={`btn btn-secondary mx-1`} onClick={clearSpacesHandler}>clear extra spaces</button>
+          <button disabled = {text.length === 0} className={`btn btn-secondary mx-1 my-1`} onClick={onClickUpHandler}>Convert to Upper-Case</button>
+          <button disabled = {text.length === 0} className={`btn btn-secondary mx-1 my-1`} onClick={onClickDownHandler}>Convert to Lower-Case</button>
+          <button disabled = {text.length === 0} className={`btn btn-secondary mx-1 my-1`} onClick={copyHandler}>Copy Text</button>
+          <button disabled = {text.length === 0} className={`btn btn-secondary mx-1 my-1`} onClick={onClickClearHandler}>Clear</button>
+          <button disabled = {text.length === 0} className={`btn btn-secondary mx-1 my-1`} onClick={clearSpacesHandler}>clear extra spaces</button>
 
-          <button type="button" onClick={speakHandler} className="btn btn-success mx-2 my-2">Speak</button>
-          <button type="button" onClick={cancelSpeakHandler} className="btn btn-danger mx-2 my-2">StopSpeak</button>
+          <button disabled = {text.length === 0} type="button" onClick={speakHandler} className="btn btn-success mx-2 my-2">Speak</button>
+          <button disabled = {text.length === 0} type="button" onClick={cancelSpeakHandler} className="btn btn-danger mx-2 my-2">StopSpeak</button>
         
       </div>
 
       <div className="container my-3">
         <h1>Your text summary</h1>
-        <p>{text.split(' ').length} words and {text.length} characters</p>
-        <p>{0.008 * text.split(' ').length} minutes read</p>
+        <p>{text.split(' ').filter((ele)=>{return ele.length!==0}).length} words and {text.length} characters</p>
+        <p>{0.008 * text.split(' ').filter((ele)=>{return ele.length!==0}).length} minutes read</p>
         <h2>Preview</h2>
         <p>{text.length>0?text:"Enter something in the Text Box to preview it here"}</p>
       </div>

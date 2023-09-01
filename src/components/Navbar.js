@@ -12,6 +12,10 @@ export default function Navbar(props) {
 
       <button value="pink" style={{backgroundColor: "#681826"}} type="button" className="btn btn-secondary btn-sm" onClick={props.themeChangeHandler}>Dark Pink</button>
       <button value="blue" style={{backgroundColor: "#2d2d85"}} type="button" className="btn btn-secondary btn-sm" onClick={props.themeChangeHandler}>Dark Blue</button>
+{/* 
+      <div className="d-flex">
+        <div onClick={props.togglehandler} className='bg-primary rounded mx-2' style={{height: "30px", width:"30px"}}></div>
+      </div> */}
 
         <div className={`form-check form-switch text-${props.mode==='dark'?'light':'dark'}`}>
           <input onClick={props.toggleMode} className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
