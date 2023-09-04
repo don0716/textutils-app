@@ -66,7 +66,7 @@ function App() {
 
   return (
     <>
-    <Navbar title= "TextUtils" about= "About Us" mode={mode} toggleMode={toggleMode} themeChangeHandler={themeChangeHandler}></Navbar>
+    <Navbar title= "extUtils" about= "About Us" mode={mode} toggleMode={toggleMode} themeChangeHandler={themeChangeHandler}></Navbar>
 
       <Alert alert={alert}/>
     
