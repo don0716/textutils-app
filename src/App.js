@@ -78,7 +78,7 @@ function App() {
 
     <div className="container my-3 mb-4">
      <Routes>
-        <Route path="/" element={<TextForm heading = "Try Textutils - Textcounter, Wordcounter, remove extra spaces, Lowercase to Uppercase, Uppercase to lowercase" mode={mode} showAlert={showAlert}/>}/>
+        <Route path="/textutils-app/" element={<TextForm heading = "Try Textutils - Textcounter, Wordcounter, remove extra spaces, Lowercase to Uppercase, Uppercase to lowercase" mode={mode} showAlert={showAlert}/>}/>
 
         <Route path="/about" element={<About mode={mode}/>}/>
      </Routes>
